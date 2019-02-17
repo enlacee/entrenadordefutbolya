@@ -1,0 +1,18 @@
+// booststrap custom
+a{
+	color: $link-color;
+}
+.btn{
+	cursor: pointer;
+}
+// forms
+select.form-control:not([size]):not([multiple]){
+	height: auto;
+}
+// breadcrumb
+// ------------------------------------------------
+.breadcrumb{
+	a{
+		color: $primary;
+	}
+}

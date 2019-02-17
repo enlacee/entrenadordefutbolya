@@ -1,0 +1,180 @@
+.toggle,
+[id^=drop] {
+	display: none;
+}
+div.content-bbt-menu{
+	z-index: 2;
+	.navbar-header a.navbar-brand {
+		font-size:1.8em;
+		color:black;
+	}
+	@include media-breakpoint-only(xs) {
+		padding: 11px;
+	}
+
+	.navbar{
+		padding-top:0;
+		padding-bottom:0;
+	}
+
+}
+.bbt-menu{
+	background-color:white;
+	width:100%;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+nav {
+	width:100%;
+	padding:0;
+	text-align: center;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	a{
+		display: block;
+		color: black;
+		&:visited {
+			display: block;
+			color: black;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	a span {
+		color: black;
+	}
+	ul {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		position: relative;
+		font-size: 0.95em;
+		line-height: 1;
+		a{
+			padding: 0.8em 2.2em;
+			margin: 0;
+		}
+		li:hover > a {
+			color: #d75f16;
+		}
+	}
+	ul li {
+		margin: 0px;
+		display: inline-block;
+		background: white;
+		text-transform: uppercase;
+		&.current-menu-item > a {
+			color: #d75f16;
+		}
+	}
+	label{
+		margin: 0;
+	}
+}
+nav ul ul {
+	display: none;
+	position: absolute;
+	// top:100%;
+	@include media-breakpoint-only(xs) {
+		display: block;
+	}
+}
+/* SHOW AND HIDE SUBMENUS */
+nav ul li:hover > ul {
+	display: inherit;
+	display: block;
+	color:red;
+}
+nav ul ul li {
+	// width: 10em; /*** Lebar Down Menu ***/
+	float: none;
+	display: list-item;
+	position: relative;
+	text-align: left;
+	width:10em;
+}
+nav ul ul ul {
+	position: absolute;
+	top: 0;
+	left: 10em;
+}
+/* mobile menu*/
+nav > label {
+	text-align: center;
+}
+nav label span{
+	float:right;
+}
+nav > label > span{
+	float:none;
+}
+nav input[type=checkbox]{
+	display: none;
+}
+/* Media Queries
+*******************************************/
+@include media-breakpoint-down(xs){
+	div.content-bbt-menu{
+		.navbar-header a.navbar-brand {
+			font-size:1.5em;
+		}
+	}
+	nav {
+		text-align: left;
+		margin: 0;
+		ul {
+			text-align: left;
+		}
+	}
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+	.toggle {
+		display: block;
+		background-color: white;
+		padding: 0 1.3em;
+		color: black;
+		font-size: 1em;
+		line-height: normal;
+		text-decoration: none;
+		border: none;
+	}
+	/* Event to show and hide*/
+	[id^=drop]:checked + ul {
+		display: block;width: 100%;
+	}
+	nav a {
+		font-size: 1em;
+	}
+	nav > label > span{
+		font-size: 1.5em;
+	}
+	nav ul li {
+		display: block;
+		width: 100%;
+		float: left;
+	}
+	nav ul ul .toggle,
+	nav ul ul a,
+	nav ul ul ul a {
+		padding: 0.8em 2.2em;
+	}
+	nav ul ul {
+		float: none;
+		position: static;
+	}
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul ul ul {
+		position: static;
+	}
+}
+

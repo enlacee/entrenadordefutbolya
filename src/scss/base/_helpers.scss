@@ -1,0 +1,15 @@
+/**
+ * Classes to help you in your work
+ */
+
+// others
+.disable-scroll{
+	overflow: hidden;
+	position: fixed;
+	// tablet and mobile
+	@include media-breakpoint-down(sm){
+		position: fixed;
+		left: 0;
+		right: 0;
+	}
+}

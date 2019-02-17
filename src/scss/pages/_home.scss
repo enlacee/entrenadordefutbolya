@@ -1,0 +1,79 @@
+// home css
+.container{
+	padding: 0;
+	&::after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+	&.site-inner{
+		padding-top: 2em;
+		@include media-breakpoint-down(sm){
+			padding-top: 1em;
+			padding-left: 0.8em;
+			padding-right: 0.8em;
+		}
+	}
+}
+.content-sidebar-wrap{
+
+}
+#primary {
+	width: 810px;
+	float:left;
+	@include media-breakpoint-down(md){
+		width: 100%;
+	}
+}
+// widget area
+#secondary{
+	float: right;
+	width: 300px;
+	@include media-breakpoint-down(sm){
+		width: 100%;
+	}
+}
+// footer
+.footer-widgets {
+	background-color: #222;
+	color: #fff;
+	clear: both;
+	font-size: 20px;
+	padding: 60px 0 20px;
+}
+.site-footer{
+	background-color: #222;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	text-align: center;
+	a{
+		color: #aaa
+	}
+}
+/**
+ * Container index.php
+ **/
+.blog .inner-content{
+}
+.blog article{
+	margin-bottom: 1em;
+}
+.blog .post.entry{
+	border-bottom: 2px solid #eee;
+	margin-bottom:3em;
+}
+.entry-content a {
+	color: #d75f16;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Raleway', sans-serif;
+}
+h1{
+	font-size: 1.9em;
+	@include media-breakpoint-down(md){
+		font-size: 1.5em;
+	}
+}
+h2{
+	font-size: 1.7em;
+}
