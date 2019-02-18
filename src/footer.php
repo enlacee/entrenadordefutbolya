@@ -1,5 +1,6 @@
-
-</div><!--  end container-->
+<?php if ( is_page_template() === false ): ?>
+	</div><!--  end container-->
+<?php endif; ?>
 
 <div class="footer-widgets">
 	<div class="container">

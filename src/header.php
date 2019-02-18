@@ -19,4 +19,6 @@
 
 <body <?php body_class(); ?> >
 <?php include '_header-menu.php'; ?>
-<div class="container site-inner">
+<?php if ( is_page_template() === false ): ?>
+	<div class="container site-inner">
+<?php endif; ?>
