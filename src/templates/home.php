@@ -4,7 +4,7 @@
 get_header();
 
 ?>
-<div class="container-fluid home-body" style="background-color: #1c79a5; height: 100%; margin-bottom:-40px">
+<div class="container-fluid home-body background-box" style="height: 100%;">
 
 	<div class="container">
 		<div class="row">
@@ -32,11 +32,9 @@ get_header();
 		</div>
 		<div class="row">
 			<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 text-center">
-				copyright
+				.
 			</div>
 		</div>
-
-
 	</div>
 </div>
 <style type="text/css">
@@ -60,13 +58,19 @@ html, body{
 	margin-top: 15px;
 	margin-bottom: 30px;
 }
-.site-branding{
-	height: 40px;
+.home-body .container{
+	padding-top: 5%;
+}
+.content-bbt-menu{
+	padding: 14px 0;
+}
+h1.site-title{
+	margin: 0;
+	font-size: 1.55em;
 }
 
-
 form{
-	background-color: rgba(34, 34, 34, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
 	border-radius: 3px;
 	padding: 10px;
 	margin-bottom: 20px;
@@ -79,7 +83,7 @@ form textarea {
 
 @media (max-width: 768px) {
 	.home-body h1{
-		font-size: 1.4em;
+		font-size: 1.5em;
 		margin-top: 10px;
 	}
 	.home-body h2{
@@ -89,12 +93,18 @@ form textarea {
 		margin-top: 5px;
 	}
 	div.content-bbt-menu{
-	padding-top: 0;
-	padding-bottom: 0;
-
+/*		padding-top: 0;
+		padding-bottom: 0;*/
 	}
 }
 </style>
+<script type="text/javascript">
+	(function($){
+		var $homeBody = $( '.home-body' );
+		var $headerHeight = $( '.container.content-bbt-menu' ).height();
+		
+		$homeBody.height( $(window).height() - $headerHeight );
+	})(jQuery);
+</script>
 <?php
 get_footer();
-?>
