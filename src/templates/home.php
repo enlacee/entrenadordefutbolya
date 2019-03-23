@@ -5,8 +5,9 @@ get_header();
 
 ?>
 <div class="container-fluid home-body background-box" style="height: 100%;">
-
+	<div class="background d-none d-md-block"></div>
 	<div class="container">
+
 		<div class="row">
 			<h1 class="col-md-12 text-center">La manera más rápida de preguntar a entrenadores de fútbol online</h1>
 			<h2 class="col-xs-12 col-md-12 text-center">EntrenadorDeFutbolYa le asignará el entrenador más adecuado</h2>
@@ -62,11 +63,13 @@ html, body{
 	padding-top: 5%;
 }
 .content-bbt-menu{
-	padding: 14px 0;
+	/*padding: 14px 0;*/
+	padding: 0;
 }
 h1.site-title{
 	margin: 0;
 	font-size: 1.55em;
+	line-height: 2em;
 }
 
 form{
@@ -96,6 +99,17 @@ form textarea {
 /*		padding-top: 0;
 		padding-bottom: 0;*/
 	}
+}
+.background{
+	background-image: url(<?php echo get_template_directory_uri(); ?>/img/football2.png);
+	background-position: right bottom;;
+	background-repeat: no-repeat;
+	/*background-size: 100% auto;*/
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 </style>
 <script type="text/javascript">
