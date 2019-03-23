@@ -8,7 +8,11 @@ Website to ask or consult all about soccer(fútbol)
 
 This is a themplate for wordpress
 
+### Recommended structure
 
+- app
+	-- themes
+	-- plugins
 
 ![thumbnail](http://i.imgur.com/J6GHYeJ.png)
 
